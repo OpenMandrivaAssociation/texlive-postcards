@@ -1,3 +1,9 @@
+# revision 21641
+# category Package
+# catalog-ctan /macros/latex/contrib/postcards
+# catalog-date 2009-01-23 15:11:09 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-postcards
 Version:	20090123
 Release:	1
@@ -43,6 +49,7 @@ example is provided.
 %doc %{_texmfdistdir}/doc/latex/postcards/README
 %doc %{_texmfdistdir}/doc/latex/postcards/datasmp.txt
 %doc %{_texmfdistdir}/doc/latex/postcards/pcardsmp.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ example is provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
