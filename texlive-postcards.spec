@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A modification of the standard LaTeX letter class which prints
@@ -28,20 +26,12 @@ is employed to address the front side of each postcard and a
 message is printed on the back side of all. An illustrative
 example is provided.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -50,7 +40,6 @@ example is provided.
 %doc %{_texmfdistdir}/doc/latex/postcards/README
 %doc %{_texmfdistdir}/doc/latex/postcards/datasmp.txt
 %doc %{_texmfdistdir}/doc/latex/postcards/pcardsmp.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,5 +50,3 @@ example is provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
