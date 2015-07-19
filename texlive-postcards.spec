@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-postcards
 Version:	20090123
-Release:	9
+Release:	10
 Summary:	Facilitates mass-mailing of postcards (junkmail)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/postcards
