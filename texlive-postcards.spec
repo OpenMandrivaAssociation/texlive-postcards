@@ -1,6 +1,6 @@
 Name:		texlive-postcards
 Version:	21641
-Release:	1
+Release:	2
 Summary:	Facilitates mass-mailing of postcards (junkmail)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/postcards
