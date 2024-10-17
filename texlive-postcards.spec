@@ -3,7 +3,7 @@ Version:	21641
 Release:	2
 Summary:	Facilitates mass-mailing of postcards (junkmail)
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/postcards
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/postcards
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/postcards.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/postcards.doc.r%{version}.tar.xz
